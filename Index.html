@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check current weather conditions in cities around the world.">
+    <title>Weather Now</title>
+
+    <!-- Link the external stylesheet and JavaScript -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Page heading and introduction -->
+    <header>
+        <h1>Weather Now</h1>
+        <p>Check the current weather around the world.</p>
+    </header>
+
+    <!-- Main weather application -->
+    <main>
+        <section class="weather-container" aria-labelledby="weather-heading">
+            <h2 id="weather-heading">Current Weather</h2>
+
+            <!-- Dropdown for suggested cities -->
+            <label for="city-select">Choose a city:</label>
+            <select id="city-select">
+                <option value="Richmond Hill">Richmond Hill</option>
+                <option value="Toronto">Toronto</option>
+                <option value="New York">New York</option>
+                <option value="Tokyo">Tokyo</option>
+            </select>
+
+            <!-- Text input for searching other cities -->
+            <label for="city-input">Or enter any city:</label>
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Example: Vancouver"
+                autocomplete="off"
+            >
+
+            <button id="search-button" type="button">Get Weather</button>
+
+            <!-- Weather results are inserted here by JavaScript -->
+            <div id="weather-result" aria-live="polite">
+                <p>Select a city or enter one above to see the current weather.</p>
+            </div>
+
+            <!-- API and input errors appear here -->
+            <p id="error-message" role="alert"></p>
+        </section>
+    </main>
+
+    <!-- Page footer -->
+    <footer>
+        <p>Weather information powered by WeatherAPI.com</p>
+    </footer>
+
+</body>
+</html>
+
